@@ -1,0 +1,37 @@
+{
+  "site": {
+    "title": "JobPortal — Official Registration",
+    "shortName": "JobPortal",
+    "logoText": "JP",
+    "tagline": "Verified Job Registration Portal",
+    "footerText": "© 2026 JobPortal. All rights reserved.",
+    "supportEmail": "support@example.com",
+    "defaultWhatsapp": "923125540048",
+    "defaultTelegram": "https://t.me/example",
+    "defaultTheme": "dark"
+  },
+
+  "text": {
+    "welcomeHeading": "Enter Your Job Code",
+    "welcomeSubtext": "Enter the code provided by your recruiter to view job details and start your registration.",
+    "codePlaceholder": "e.g. DATA001",
+    "continueButton": "Continue",
+    "invalidCodeMessage": "We couldn't find that job code. Please double-check it and try again.",
+    "loadingMessage": "Checking job code...",
+    "backButton": "Back",
+    "startRegistrationButton": "Start Registration",
+    "submitFormButton": "Submit Registration",
+    "successHeading": "Registration Completed Successfully",
+    "successSubtext": "Your details have been recorded. Please complete the payment below to finish the process.",
+    "payNowButton": "Pay Registration Fee",
+    "paymentInstructions": "Click the button above to pay via the provider shown. After payment, keep your reference number safe — you will need it for follow-up.",
+    "continueToFinalButton": "Continue",
+    "finalHeading": "Almost Done!",
+    "finalSubtext": "Send your registration for confirmation, and keep a copy for your records.",
+    "whatsappButton": "Send Registration via WhatsApp",
+    "pdfButton": "Download Registration PDF",
+    "referenceLabel": "Reference Number"
+  },
+
+  "steps": ["Job Code", "Job Details", "Registration", "Payment", "Finish"]
+}

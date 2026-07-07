@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>JobPortal — Job Registration</title>
+<meta name="description" content="Enter your job code to view job details and complete your registration.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- animated ambient background -->
+  <div class="bg-scene" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <div class="app-shell">
+
+    <!-- top bar: brand + theme toggle -->
+    <header class="topbar">
+      <div class="brand">
+        <div class="mark" id="brandMark">JP</div>
+        <div>
+          <div class="name" id="brandName">JobPortal</div>
+          <div class="tagline" id="brandTagline">Verified Job Registration Portal</div>
+        </div>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark / light mode" title="Toggle theme">
+        <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      </button>
+    </header>
+
+    <!-- progress indicator -->
+    <nav class="progress" id="progressBar" aria-label="Registration progress"></nav>
+
+    <main class="stage">
+
+      <!-- ============ SCREEN 1: JOB CODE ============ -->
+      <section class="card ticket has-notches" id="screen-code">
+        <span class="eyebrow">Step 1 · Job Code</span>
+        <h1 id="welcomeHeading">Enter Your Job Code</h1>
+        <p id="welcomeSubtext">Enter the code provided by your recruiter to view job details and start your registration.</p>
+
+        <div class="perforation"></div>
+
+        <div class="code-input-row">
+          <input type="text" id="jobCodeInput" class="code-input" placeholder="e.g. DATA001" autocomplete="off" autocapitalize="characters" maxlength="20">
+          <button class="btn btn-primary" id="continueBtn" style="white-space:nowrap;">
+            <span id="continueBtnText">Continue</span>
+          </button>
+        </div>
+        <div class="error-msg" id="codeError"></div>
+      </section>
+
+      <!-- ============ SCREEN 2: JOB DETAILS ============ -->
+      <section class="card hidden" id="screen-details">
+        <span class="eyebrow" id="detailsEyebrow">Step 2 · Job Details</span>
+        <h1 id="detailsJobTitle">Job Title</h1>
+        <p id="detailsCompany" style="font-weight:600;color:var(--ink);margin-bottom:14px;"></p>
+
+        <div class="job-meta" id="detailsMeta"></div>
+
+        <p id="detailsDescription"></p>
+
+        <h3 style="font-size:.95rem;">Requirements</h3>
+        <ul class="req-list" id="detailsRequirements"></ul>
+
+        <div class="actions-col">
+          <button class="btn btn-accent btn-block" id="startRegistrationBtn">Start Registration</button>
+          <button class="btn btn-ghost btn-block" id="backFromDetailsBtn">Back</button>
+        </div>
+      </section>
+
+      <!-- ============ SCREEN 3: DYNAMIC FORM ============ -->
+      <section class="card hidden" id="screen-form">
+        <span class="eyebrow">Step 3 · Registration Form</span>
+        <h2 id="formJobTitle">Registration</h2>
+        <p>Fill in the details below. Fields shown are specific to this job.</p>
+
+        <form id="registrationForm" novalidate>
+          <div class="form-grid" id="formFieldsContainer"></div>
+          <div class="actions-col">
+            <button type="submit" class="btn btn-primary btn-block" id="submitFormBtn">Submit Registration</button>
+            <button type="button" class="btn btn-ghost btn-block" id="backFromFormBtn">Back</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- ============ SCREEN 4: SUCCESS + PAYMENT ============ -->
+      <section class="card ticket has-notches hidden" id="screen-payment">
+        <div class="icon-circle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
+        </div>
+        <h2 class="text-center" id="successHeading">Registration Completed Successfully</h2>
+        <p class="text-center" id="successSubtext">Your details have been recorded. Please complete the payment below to finish the process.</p>
+
+        <div class="perforation"></div>
+
+        <div class="stub-row"><span class="label">Job</span><span class="value" id="paymentJobTitle"></span></div>
+        <div class="stub-row"><span class="label">Registration Fee</span><span class="value" id="paymentFee"></span></div>
+        <div class="stub-row"><span class="label">Payment Provider</span><span class="value" id="paymentProvider"></span></div>
+
+        <div class="actions-col">
+          <a class="btn btn-accent btn-block" id="payNowBtn" href="#" target="_blank" rel="noopener">Pay Registration Fee</a>
+          <p style="font-size:.82rem;margin-top:4px;" id="paymentInstructions"></p>
+          <button class="btn btn-primary btn-block" id="continueToFinalBtn">Continue</button>
+        </div>
+      </section>
+
+      <!-- ============ SCREEN 5: FINAL — WHATSAPP / PDF ============ -->
+      <section class="card ticket has-notches hidden" id="screen-final">
+        <span class="eyebrow">Step 5 · Finish</span>
+        <h2 id="finalHeading">Almost Done!</h2>
+        <p id="finalSubtext">Send your registration for confirmation, and keep a copy for your records.</p>
+
+        <div class="ref-number" id="referenceNumber"></div>
+
+        <div class="perforation"></div>
+
+        <div class="actions-col">
+          <button class="btn btn-whatsapp btn-block" id="whatsappBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11 11 0 003.6 17.7L2 22l4.4-1.6a11 11 0 1014.1-16.9zM12 20a8 8 0 01-4.1-1.1l-.3-.2-3 .9.8-2.9-.2-.3A8 8 0 1112 20zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-1.3-.6-2.2-1.1-3-2.5-.2-.4.2-.4.5-1.3.1-.1.1-.3 0-.4-.1-.1-.5-1.3-.7-1.7-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.9 2.3 1 2.4c.1.2 1.7 2.6 4.1 3.6.6.2 1 .4 1.4.5.6.2 1.1.1 1.5.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.2-.4-.3z"/></svg>
+            Send Registration via WhatsApp
+          </button>
+          <button class="btn btn-ghost btn-block" id="pdfBtn">Download Registration PDF</button>
+        </div>
+      </section>
+
+    </main>
+
+    <p class="footer-note" id="footerText">© 2026 JobPortal. All rights reserved.</p>
+  </div>
+
+  <!-- jsPDF (only external library — used solely for the downloadable PDF receipt) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
