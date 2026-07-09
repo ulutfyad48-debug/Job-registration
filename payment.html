@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Complete Your Payment</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <div class="bg-scene" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <div class="app-shell">
+
+    <header class="topbar">
+      <div class="brand">
+        <div class="mark" id="brandMark">JP</div>
+        <div>
+          <div class="name" id="brandName">JobPortal</div>
+          <div class="tagline" id="brandTagline">Verified Job Registration Portal</div>
+        </div>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark / light mode" title="Toggle theme">
+        <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      </button>
+    </header>
+
+    <main class="stage">
+      <section class="card ticket has-notches" id="payCard">
+        <span class="eyebrow" id="payEyebrow">Payment</span>
+        <h1 id="payHeading">Complete Your Payment</h1>
+        <p id="paySubtext">Send the exact registration fee using the details below, then return and confirm on WhatsApp.</p>
+
+        <div class="perforation"></div>
+
+        <div class="stub-row"><span class="label">Job</span><span class="value" id="payJobTitle">—</span></div>
+        <div class="stub-row"><span class="label">Amount to Pay</span><span class="value" id="payFee">—</span></div>
+        <div class="stub-row"><span class="label">Method</span><span class="value" id="payMethod">—</span></div>
+
+        <div class="perforation"></div>
+
+        <div id="accountBlock">
+          <label style="display:block;font-size:.82rem;font-weight:600;margin-bottom:6px;">Account Number</label>
+          <div class="code-input-row">
+            <input type="text" id="accountNumber" class="code-input" readonly value="—">
+            <button class="btn btn-primary" id="copyBtn">Copy Number</button>
+          </div>
+          <div class="stub-row mt-16"><span class="label">Account Name</span><span class="value" id="accountName">—</span></div>
+          <p class="mt-16" id="payInstructions"></p>
+        </div>
+
+        <div class="actions-col">
+          <button class="btn btn-whatsapp btn-block" id="paidBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11 11 0 003.6 17.7L2 22l4.4-1.6a11 11 0 1014.1-16.9zM12 20a8 8 0 01-4.1-1.1l-.3-.2-3 .9.8-2.9-.2-.3A8 8 0 1112 20zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-1.3-.6-2.2-1.1-3-2.5-.2-.4.2-.4.5-1.3.1-.1.1-.3 0-.4-.1-.1-.5-1.3-.7-1.7-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.9 2.3 1 2.4c.1.2 1.7 2.6 4.1 3.6.6.2 1 .4 1.4.5.6.2 1.1.1 1.5.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.2-.4-.3z"/></svg>
+            I've Paid — Send Confirmation on WhatsApp
+          </button>
+          <a class="btn btn-ghost btn-block" id="backBtn" href="index.html">Back to Registration</a>
+        </div>
+      </section>
+    </main>
+
+    <p class="footer-note" id="footerText">© 2026 JobPortal. All rights reserved.</p>
+  </div>
+
+  <script src="assets/js/payment.js"></script>
+</body>
+</html>
