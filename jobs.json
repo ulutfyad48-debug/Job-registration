@@ -1,38 +1,34 @@
 [
   {
-    "id": "DATA0fmxm.01",
-    "jobTitle": "Data Entry Operator",
+    "id": "DATA001",
+    "jobTitle": "Google Reviews Writer (Work From Home)",
     "company": "Example Recruitment Service",
     "website": "https://ulutfyad48-debug.github.io/Job-registration/",
-    "description": "We are hiring remote Data Entry Operators in Nigeria. You will process, organize, and update records using Microsoft Excel and Word on a flexible daily schedule. No prior office experience required — training material is provided after registration.",
+    "description": "We are hiring people across Pakistan to write Google reviews for our clients' business pages. You will post 5-star reviews on assigned pages and get paid per review based on the quality and amount of work. This is a flexible, part-time, work-from-home job — no experience required.",
     "requirements": [
-      "Basic Computer Knowledge",
-      "Microsoft Excel & Word",
-      "Stable Internet Connection",
+      "Active Gmail / Google Account",
       "Smartphone or Laptop",
-      "Basic English Reading & Writing",
-      "Minimum 2-3 Hours Daily Availability"
+      "Stable Internet Connection",
+      "Basic English Writing",
+      "Honest & Consistent Work"
     ],
-    "registrationFee": "1 USD",
-    "paymentProvider": "Payoneer",
-    "paymentNote": "We will send you the payment link on the same platform (WhatsApp) that you used to contact us.",
+    "registrationFee": "100 PKR",
+    "paymentProvider": "JazzCash",
+    "paymentLink": "",
+    "paymentNote": "Pay Rs. 100 registration fee via JazzCash to 03125540048 (Account Name: YADULLAH). After payment, send the screenshot on WhatsApp along with your reference number to complete your registration.",
     "whatsapp": "923125540048",
     "telegram": "",
     "email": "ullahyad199@gmail.com",
     "formFields": [
       { "id": "fullName", "label": "Full Name", "type": "text", "required": true, "placeholder": "Your full name" },
-      { "id": "age", "label": "Age", "type": "number", "required": true, "placeholder": "e.g. 24" },
-      { "id": "country", "label": "Country", "type": "text", "required": true, "placeholder": "e.g. Nigeria" },
-      { "id": "city", "label": "City / State", "type": "text", "required": true, "placeholder": "e.g. Lagos" },
-      { "id": "phone", "label": "WhatsApp Number", "type": "tel", "required": true, "placeholder": "e.g. 234XXXXXXXXX" },
-      { "id": "email", "label": "Email Address", "type": "email", "required": true, "placeholder": "you@example.com" },
-      { "id": "education", "label": "Education Level", "type": "select", "required": true, "options": ["High School", "Diploma", "Bachelor's Degree", "Master's Degree", "Other"] },
-      { "id": "excelExperience", "label": "Microsoft Excel Experience", "type": "select", "required": true, "options": ["Beginner", "Intermediate", "Expert"] },
-      { "id": "typingSpeed", "label": "Typing Speed (Words Per Minute)", "type": "number", "required": true, "placeholder": "e.g. 30" },
-      { "id": "deviceType", "label": "Device You Will Use", "type": "select", "required": true, "options": ["Laptop", "Desktop Computer", "Smartphone Only"] },
-      { "id": "internetType", "label": "Internet Connection Type", "type": "select", "required": true, "options": ["WiFi / Broadband", "Mobile Data"] },
-      { "id": "availability", "label": "Daily Availability", "type": "select", "required": true, "options": ["2-3 Hours", "4-6 Hours", "Full-Time (6+ Hours)"] },
-      { "id": "priorExperience", "label": "Any Prior Data Entry / Office Experience?", "type": "textarea", "required": false, "placeholder": "Briefly describe (optional)" }
+      { "id": "age", "label": "Age", "type": "number", "required": true, "placeholder": "e.g. 22" },
+      { "id": "city", "label": "City", "type": "text", "required": true, "placeholder": "e.g. Lahore" },
+      { "id": "phone", "label": "WhatsApp Number", "type": "tel", "required": true, "placeholder": "03XXXXXXXXX" },
+      { "id": "googleEmail", "label": "Gmail Address (used for reviews)", "type": "email", "required": true, "placeholder": "yourname@gmail.com" },
+      { "id": "deviceType", "label": "Device You Will Use", "type": "select", "required": true, "options": ["Android Phone", "iPhone", "Laptop / Computer"] },
+      { "id": "hasGoogleAccount", "label": "Do you have an active Google account with review history?", "type": "select", "required": true, "options": ["Yes", "No"] },
+      { "id": "reviewsPerDay", "label": "How many reviews can you write daily?", "type": "number", "required": true, "placeholder": "e.g. 5" },
+      { "id": "availability", "label": "Daily Availability", "type": "select", "required": true, "options": ["1-2 Hours", "3-5 Hours", "Full-Time (6+ Hours)"] }
     ]
   }
 ]
