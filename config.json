@@ -11,6 +11,19 @@
     "defaultTheme": "dark"
   },
 
+  "paymentAccounts": {
+    "JazzCash": {
+      "accountNumber": "03125540048",
+      "accountName": "YADULLAH",
+      "instructions": "Open JazzCash app or dial *786# → Send Money → enter the number below → enter the exact fee amount → complete the transaction, then take a screenshot."
+    },
+    "Payoneer": {
+      "accountNumber": "",
+      "accountName": "",
+      "instructions": "Contact us on WhatsApp to receive Payoneer payment details for this job."
+    }
+  },
+
   "text": {
     "welcomeHeading": "Enter Your Job Code",
     "welcomeSubtext": "Enter the code provided by your recruiter to view job details and start your registration.",
@@ -30,7 +43,14 @@
     "finalSubtext": "Send your registration for confirmation, and keep a copy for your records.",
     "whatsappButton": "Send Registration via WhatsApp",
     "pdfButton": "Download Registration PDF",
-    "referenceLabel": "Reference Number"
+    "referenceLabel": "Reference Number",
+
+    "payPageHeading": "Complete Your Payment",
+    "payPageSubtext": "Send the exact registration fee using the details below, then return and confirm on WhatsApp.",
+    "copyButton": "Copy Number",
+    "copiedButton": "Copied!",
+    "iHavePaidButton": "I've Paid — Send Confirmation on WhatsApp",
+    "backToSiteButton": "Back to Registration"
   },
 
   "steps": ["Job Code", "Job Details", "Registration", "Payment", "Finish"]
