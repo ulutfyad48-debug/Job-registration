@@ -1,6 +1,6 @@
 [
   {
-    "id": "DATA001",
+    "id": "GRW-PK01",
     "jobTitle": "Google Reviews Writer (Work From Home)",
     "company": "Example Recruitment Service",
     "website": "https://ulutfyad48-debug.github.io/Job-registration/",
@@ -14,7 +14,7 @@
     ],
     "registrationFee": "100 PKR",
     "paymentProvider": "JazzCash",
-    "paymentLink": "",
+    "paymentLink": "payment.html?job=GRW-PK01",
     "paymentNote": "Pay Rs. 100 registration fee via JazzCash to 03125540048 (Account Name: YADULLAH). After payment, send the screenshot on WhatsApp along with your reference number to complete your registration.",
     "whatsapp": "923125540048",
     "telegram": "",
