@@ -51,7 +51,16 @@
             <input type="text" id="accountNumber" class="code-input" readonly value="—">
             <button class="btn btn-primary" id="copyBtn">Copy Number</button>
           </div>
-          <div class="stub-row mt-16"><span class="label">Account Name</span><span class="value" id="accountName">—</span></div>
+
+          <div id="ibanRow" class="hidden mt-16">
+            <label style="display:block;font-size:.82rem;font-weight:600;margin-bottom:6px;">IBAN</label>
+            <div class="code-input-row">
+              <input type="text" id="ibanNumber" class="code-input" readonly value="—">
+              <button class="btn btn-primary" id="copyIbanBtn">Copy IBAN</button>
+            </div>
+          </div>
+
+          <div class="stub-row mt-16"><span class="label">Account Title</span><span class="value" id="accountName">—</span></div>
           <p class="mt-16" id="payInstructions"></p>
         </div>
 
