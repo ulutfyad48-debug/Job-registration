@@ -12,21 +12,12 @@
   },
 
   "paymentAccounts": {
-    "JazzCash": {
-      "accountNumber": "03125540048",
-      "accountName": "YADULLAH",
-      "instructions": "Open JazzCash app or dial *786# → Send Money → enter the number below → enter the exact fee amount → complete the transaction, then take a screenshot."
-    },
     "Bank Transfer": {
+      "bankName": "Meezan Bank",
       "accountTitle": "SANA ARIF",
       "accountNumber": "00300115399521",
       "iban": "PK18MEZN0000300115399521",
       "instructions": "Transfer the exact fee amount using the account number or IBAN below via your banking app, then take a screenshot of the transaction."
-    },
-    "Payoneer": {
-      "accountNumber": "",
-      "accountName": "",
-      "instructions": "Contact us on WhatsApp to receive Payoneer payment details for this job."
     }
   },
 
