@@ -38,6 +38,12 @@
     setText("payJobTitle", job.jobTitle);
     setText("payFee", job.registrationFee);
     setText("payMethod", job.paymentProvider);
+
+    if (account.bankName) {
+      document.getElementById("bankNameRow").style.display = "flex";
+      setText("bankName", account.bankName);
+    }
+
     setText("accountName", account.accountTitle || account.accountName || "—");
     setText("payInstructions", account.instructions || job.paymentNote || "");
 
