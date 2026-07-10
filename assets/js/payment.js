@@ -38,13 +38,22 @@
     setText("payJobTitle", job.jobTitle);
     setText("payFee", job.registrationFee);
     setText("payMethod", job.paymentProvider);
-    setText("accountName", account.accountName || "—");
+    setText("accountName", account.accountTitle || account.accountName || "—");
     setText("payInstructions", account.instructions || job.paymentNote || "");
 
     const numberInput = document.getElementById("accountNumber");
     numberInput.value = account.accountNumber || "Contact us on WhatsApp for details";
 
-    document.getElementById("copyBtn").addEventListener("click", () => copyNumber(config));
+    const ibanRow = document.getElementById("ibanRow");
+    if (account.iban) {
+      ibanRow.classList.remove("hidden");
+      document.getElementById("ibanNumber").value = account.iban;
+      document.getElementById("copyIbanBtn").addEventListener("click", () => copyField("ibanNumber", config));
+    } else {
+      ibanRow.classList.add("hidden");
+    }
+
+    document.getElementById("copyBtn").addEventListener("click", () => copyField("accountNumber", config));
 
     document.getElementById("paidBtn").addEventListener("click", () => {
       const number = (job.whatsapp || config.site.defaultWhatsapp || "").replace(/\D/g, "");
@@ -71,12 +80,12 @@
     document.title = config.text.payPageHeading + " — " + config.site.shortName;
   }
 
-  function copyNumber(config) {
-    const input = document.getElementById("accountNumber");
+  function copyField(inputId, config) {
+    const input = document.getElementById(inputId);
     input.select();
     input.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(input.value).then(() => {
-      const btn = document.getElementById("copyBtn");
+      const btn = inputId === "ibanNumber" ? document.getElementById("copyIbanBtn") : document.getElementById("copyBtn");
       const original = btn.textContent;
       btn.textContent = config.text.copiedButton;
       setTimeout(() => (btn.textContent = original), 1500);
