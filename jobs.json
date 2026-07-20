@@ -30,5 +30,41 @@
       { "id": "reviewsPerDay", "label": "How many reviews can you write daily?", "type": "number", "required": true, "placeholder": "e.g. 5" },
       { "id": "availability", "label": "Daily Availability", "type": "select", "required": true, "options": ["1-2 Hours", "3-5 Hours", "Full-Time (6+ Hours)"] }
     ]
+  },
+  {
+    "id": "REF-PK200",
+    "jobTitle": "Microsoft Word & Excel Editorial Specialist (Fiverr Team & Remote Tasks)",
+    "company": "Example Recruitment Service",
+    "website": "https://ulutfyad48-debug.github.io/Job-registration/",
+    "description": "We are hiring skilled remote workers and team members for our Fiverr projects and independent tasks. Selected candidates will work on Microsoft Word editorial formatting, Excel data management, and related professional tasks. You will be assigned tasks according to your skills, and you will be paid strictly based on the quality and amount of work completed. Form submission completion will be reviewed, and if any physical or digital documentation is required, we will contact you to send pictures or verification copies.",
+    "requirements": [
+      "Expertise in Microsoft Word and Microsoft Excel",
+      "Active Mobile / WhatsApp Number",
+      "Laptop or Desktop Computer",
+      "Stable Internet Connection",
+      "Honest & Consistent Work"
+    ],
+    "registrationFee": "200 PKR",
+    "paymentProvider": "Bank Transfer / Easypaisa / JazzCash",
+    "paymentLink": "payment.html?job=REF-PK200",
+    "paymentNote": "Transfer the exact registration fee using the payment details on the payment page. After payment, send the screenshot on WhatsApp along with your reference number to complete your registration.",
+    "whatsapp": "923125540048",
+    "telegram": "",
+    "email": "ullahyad199@gmail.com",
+    "formFields": [
+      { "id": "fullName", "label": "مکمل نام (Full Name)", "type": "text", "required": true, "placeholder": "آپ کا پورا نام" },
+      { "id": "fatherName", "label": "والد کا نام (Father's Name)", "type": "text", "required": true, "placeholder": "والد کا نام" },
+      { "id": "dob", "label": "تاریخ پیدائش (Date of Birth)", "type": "text", "required": true, "placeholder": "DD/MM/YYYY" },
+      { "id": "gender", "label": "جنس (Gender)", "type": "select", "required": true, "options": ["Male", "Female", "Other"] },
+      { "id": "cnic", "label": "CNIC نمبر (CNIC Number)", "type": "text", "required": true, "placeholder": "XXXXX-XXXXXXX-X" },
+      { "id": "phone", "label": "موبایل / WhatsApp نمبر", "type": "tel", "required": true, "placeholder": "03XXXXXXXXX" },
+      { "id": "email", "label": "ای میل ایڈریس", "type": "email", "required": true, "placeholder": "yourname@gmail.com" },
+      { "id": "address", "label": "موجودہ پتہ (Current Address)", "type": "text", "required": true, "placeholder": "شہر اور پتہ" },
+      { "id": "city", "label": "شہر (City)", "type": "text", "required": true, "placeholder": "مثلاً پشاور" },
+      { "id": "education", "label": "آخری تعلیم (Last Education)", "type": "text", "required": true, "placeholder": "مثلاً بارہویں جماعت / گریجویشن" },
+      { "id": "skills", "label": "مہارت (Skills)", "type": "select", "required": true, "options": ["MS Word & Excel", "Graphic Design", "Data Entry", "Other"] },
+      { "id": "deviceType", "label": "آپ کے پاس کیا موجود ہے؟", "type": "select", "required": true, "options": ["Laptop", "Desktop PC", "Mobile Phone"] },
+      { "id": "workType", "label": "کام کی نوعیت (Work Type)", "type": "select", "required": true, "options": ["Part-Time", "Full-Time"] }
+    ]
   }
 ]
